@@ -15,7 +15,14 @@ Ex:
 
 void Ex4(char *str){
 	//Your codes here
-	
+	int i, j, isspace();
+  	for(i = j = 0; str[i] ; i++) {
+    		if( !isspace(str[i]) || (i > 0 && !isspace(str[i-1]) )) {
+      			str[j++] = str[i];
+		}
+ 	 }
+  	str[j] = '\0';
+	printf("%s\n",str);	
 }
 
 int main(int argc, char *argv[]) {
